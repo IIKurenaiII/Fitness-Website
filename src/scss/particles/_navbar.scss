@@ -1,0 +1,235 @@
+.navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $color-purple;
+        z-index: 3;
+    }
+
+
+    &__body{
+        width: 100%;
+        position: relative;
+        display:flex;
+        justify-content: space-between;
+        height: 75px;
+        align-items: center;
+    }
+
+    
+
+    &__conteiner_menu{
+        @media (max-width:767.99px) {
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color-turquoise, 0.8);
+            padding: 100px 10px 20px 10px;
+            transition: all 0.3s ease-in-out 0s;
+        }
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:2rem;
+        position: relative;
+        z-index: 5;
+
+        @media (min-width:350px) and (max-width:1023.999px){
+            gap:1rem;
+        }
+
+        @media (max-width:767.99px) {
+            flex-direction: column;
+        }
+    }
+
+    &__motto{
+        font-family: $font-dancing;
+        font-size: $font-xxxxl;
+        font-weight: 700;
+        color: $color-white;
+        z-index: 5;
+        padding-left: 80px;
+
+        @media(max-width:1023.999px){
+            display:none;
+            width: 0;
+            height: 0;
+        }
+    }
+
+
+    &__logo_link{
+        font-family: $font-oswald;
+        font-size: $font-xxxxl;
+        font-weight: 700;
+        color: $color-white;
+        cursor: pointer;
+        position: relative;
+        z-index: 5;
+
+        @media(max-width:767.999px){
+            font-size: $font-xxm;
+        }
+    }
+
+    &__link{
+        font-family: $font-oswald;
+        font-size: $font-xl;
+        font-weight: 400;
+        color: $color-white;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover{
+            transition: 0.5s;
+            color: $color-red;
+        }
+
+        @media (max-width:767.999px) {
+            margin: 0px 0px 10px 0px;
+        }
+    }
+
+    &__button{
+        font-family: $font-oswald;
+        font-size: $font-sm;
+        font-weight: 400;
+        width: 100px;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: $color-red;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+
+        &::before{
+            content: '';
+            background: linear-gradient(45deg, $color-red, $color-turquoise,$color-electric-purple,$color-green,$color-red);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        &:active{
+            color: #000
+        }
+
+        &:active::after{
+            background: transparent;
+        }
+
+        &:hover::before{
+            opacity: 1;
+        }
+
+        &::after{
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: $color-red;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+    }
+
+    &__burger{
+        display: none;
+        @media (max-width:767.999px) {
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            z-index: 5;
+
+            &::before{
+                content: '';
+                background-color: $color-white;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                top: 0;
+                transition: all 0.3s ease-in-out 0s;
+            }
+
+            &::after{
+                content: '';
+                background-color: $color-white;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                bottom: 0;
+                transition: all 0.3s ease-in-out 0s;
+            }
+        }
+    }
+
+    &__span{
+        @media (max-width:767.999px) {
+            position: absolute;
+            background-color: $color-white;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            top: 9px;
+            transition: all 0.3s ease-in-out 0s;
+        }
+    }
+}
+
+.navbar__conteiner_menu.active{
+    top: 0;
+}
+
+.navbar__burger.active span{
+    transform: scale(0);
+}
+
+.navbar__burger.active::before{
+    transform: rotate(45deg);
+    top: 9px;
+}
+
+.navbar__burger.active::after{
+    transform: rotate(-45deg);
+    bottom: 9px;
+}
