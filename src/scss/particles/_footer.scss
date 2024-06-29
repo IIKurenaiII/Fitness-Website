@@ -1,0 +1,133 @@
+.footer{
+
+    &__conteiner{
+        background: $color-bg;
+        padding: 25px;
+    }
+
+    &__block-logo{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 20px;
+
+        @media (max-width:767.9999px) {
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        @media (min-width:768px) and (max-width:1023.9999px) {
+            flex-direction: column;
+            align-items: center;
+            gap:10px;
+        }
+    }
+
+    &__logo{
+        background: $color-white;
+        padding: 5px;
+        border: 2px solid $color-turquoise;
+        border-radius: 999px;
+        width: 100px;
+        height: 100px;
+
+        @media (max-width:767.9999px) {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__title{
+        font-family: $font-oswald;
+        font-size: $font-xxxl;
+        font-weight: 700;
+        color: $color-white;
+    }
+
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: $font-oswald;
+        color: $color-white;
+
+        @media (max-width:1023.9999px) {
+            flex-direction: column;
+            align-items: start;
+            gap:10px;
+        }
+
+        @media (min-width:768px) and (max-width:1023.9999px) {
+            flex-direction: column;
+            align-items: center;
+            gap:10px;
+        }
+    }
+
+    &__about{
+        display: inherit;
+        flex-direction: column;
+        max-width: 380px;
+
+        @media (max-width:767.9999px) {
+            width: auto;
+        }
+    }
+
+    &__location{
+        display: inherit;
+        flex-direction: column;
+    }
+
+    &__about-title{
+        text-transform: uppercase;
+        font-size: $font-xxl;
+    }
+
+    &__link{
+        text-decoration: none;
+        color: $color-turquoise;
+    }
+
+    &__messengers{
+        display: flex;
+        margin-top: 10px;
+        gap: 20px;
+
+        @media (min-width:768.999px) and (max-width:1023.9999px) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__mes{
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+}
+
+.footer-fixed{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.button__scroll{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 80px;
+    display: none;
+    z-index: 3;
+    border: 1px solid $color-purple;
+    background: rgba($color: #ffffff, $alpha: 0.2);
+
+    &-img{
+        max-width: 35px;
+        max-height: 35px;
+    }
+}

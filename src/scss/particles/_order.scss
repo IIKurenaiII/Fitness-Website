@@ -1,0 +1,124 @@
+.order{
+
+
+    margin-bottom: 40px;
+
+    &__conteiner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__title{
+        font-family: $font-oswald;
+        font-size: $font-xxxl;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+
+    &__block-conteiner{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        @media (min-width:855px) and (max-width:1539.9999px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        @media (min-width:350px) and (max-width:854.9999px) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
+            width: 100%;
+        }
+    }
+
+    &__block{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        border-top: 2px solid $color-electric-purple;
+        border-bottom: 2px solid $color-electric-purple;
+        transition: 0.3s all ease-in-out;
+
+        @media (min-width:855px) {
+            &:hover{
+                transform: scale(1.2);
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-top-left-radius: 10px;
+                z-index: 2;
+                cursor: pointer;
+            }
+        }
+
+        @media (min-width:350px) and (max-width:1539.9999px) {
+            border: 2px solid $color-electric-purple;
+            border-radius: 10px;
+        }
+
+        @media (min-width:350px) and (max-width:854.9999px) {
+            width: auto;
+        }
+    }
+
+    &__img{
+        max-width: 400px;
+        max-height: 265px;
+
+        @media (min-width:350px) and (max-width:1539.9999px) {
+            max-width: 300px;
+            max-height: 265px;
+        }
+    }
+
+    &__block-button{
+        margin-top: 20px;
+        font-family: $font-oswald;
+        font-size: $font-xl;
+        width: 150px;
+        height: 40px;
+        border: 1px solid $color-purple;
+        background: $color-white;
+        border-radius: 5px;
+        transition: 0.3s ease-in-out;
+
+        &:hover{
+            background: $color-purple;
+            color: $color-white;
+        }
+    }
+
+    &__button{
+        margin-top: 40px;
+        font-family: $font-oswald;
+        font-size: $font-xl;
+        width: 150px;
+        height: 40px;
+        border: 1px solid $color-purple;
+        background: $color-white;
+        border-radius: 5px;
+        transition: 0.3s ease-in-out;
+
+        &:hover{
+            background: $color-purple;
+            color: $color-white;
+        }
+    }
+
+    &__block1{
+        border-left: 2px solid $color-electric-purple;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    &__block4{
+        border-right: 2px solid $color-electric-purple;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+

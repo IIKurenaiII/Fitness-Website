@@ -1,0 +1,63 @@
+.aboutus{
+    margin-top: 75px;
+    background: $color-bg;
+
+    &__conteiner{
+        @media (max-width:767.999px) {
+            margin-top: 0px;
+        }
+    }
+
+    &__title{
+        font-family: $font-oswald;
+        font-size: $font-xxxl;
+        font-weight: 700;
+        text-align: center;
+        color: $color-turquoise;
+    }
+
+    &__block{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+
+        @media (max-width:1023.9999px) {
+            flex-direction: column;
+            justify-content: center;
+            gap :20px;
+        }
+    }
+
+    &__box-title{
+        text-align: center;
+        font-family: $font-oswald;
+        font-size: $font-xxl;
+        font-weight: 700;
+        color: $color-white;
+    }
+
+    &__text{
+        font-family: $font-oswald;
+        font-size: $font-xl;
+        font-weight: 400;
+        color: $color-white;
+        max-width: 800px;
+    }
+
+    &__list-block{
+        list-style: none;
+    }
+
+    &__map{
+        @media (max-width:767.999px) {
+            width: auto;
+            height: auto;
+            justify-content: center;
+        }
+    }
+}
+
+.line-margin{
+    border: 1px solid $color-turquoise;
+    margin: 0;
+}

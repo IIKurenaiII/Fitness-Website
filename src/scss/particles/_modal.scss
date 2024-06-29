@@ -1,0 +1,126 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+
+
+    &__content {
+        background-color: $color-bg;
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    &__logo{
+        background: $color-white;
+        padding: 5px;
+        border: 2px solid $color-purple;
+        border-radius: 999px;
+        width: 70px;
+        height: 70px;
+        margin-bottom: 10px;
+    }
+
+    &__image-conteiner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__contact-conteiner{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__title{
+        text-align: center;
+        font-family: $font-oswald;
+        font-size: $font-xxl;
+        font-weight: 700;
+        color: $color-electric-purple;
+    }
+
+    &__phone ,&__email{
+        font-family: $font-oswald;
+        font-size: $font-md; 
+        font-weight: 400;
+        color: $color-white;
+    }
+
+    &__social-conteiner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    &__social{
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    &__buttons-conteiner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__button{
+        margin-top: 10px;
+        font-family: $font-oswald;
+        font-size: $font-xl;
+        height: 40px;
+        border: 1px solid $color-purple;
+        background: $color-white;
+        border-radius: 5px;
+        transition: 0.3s ease-in-out;
+
+        &:hover{
+            background: $color-purple;
+            color: $color-white;
+        }
+    }
+
+    &__buttons-conteiner-order{
+        justify-content: center;
+    }
+
+    &__block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    &__form-label{
+        color: $color-electric-purple;
+        font-family: $font-oswald;
+        font-size: $font-md;
+        font-weight: 400;
+    }
+
+    &__btn{
+        background-color: $color-white;
+        border-radius: 5px;
+        border: 2px solid $color-purple;
+        transition: 0.3s ease-in-out;
+        color: $color-black;
+        font-family: $font-oswald;
+        font-size: $font-md;
+        font-weight: 400;
+
+        &:hover{
+            background-color: $color-purple;
+            color: $color-white;
+        }
+    }
+}

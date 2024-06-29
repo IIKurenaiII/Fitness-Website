@@ -1,0 +1,18 @@
+.kalendar{
+    &__title{
+        color: $color-turquoise;
+        size: 18px;
+    }
+
+    &__container{
+        margin-bottom: 20px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 2px solid $color-turquoise;
+    }
+
+    .fc-daygrid-day:hover {
+        background-color: $color-turquoise;
+        cursor: pointer;
+    }
+}

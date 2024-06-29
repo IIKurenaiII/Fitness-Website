@@ -1,0 +1,72 @@
+.delivery{
+    &__title{
+        font-family: $font-oswald;
+        font-size: $font-xxl;
+        font-weight: 700;
+        color: $color-purple;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    &__block-conteiner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        @media (max-width:1099.9999px) {
+            flex-direction: column; 
+        }
+    }
+
+    &__block{
+        display: inherit;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        border: 1px solid $color-electric-purple;
+        padding-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    &__image{
+        max-width: 340px;
+        max-height: 300px;
+    }
+
+    &__block-title{
+        font-family: $font-oswald;
+        font-size: $font-xl;
+        font-weight: 400;
+        color: $color-purple;
+    }
+
+    &__button{
+        font-family: $font-oswald;
+        font-size: $font-xl;
+        width: 150px;
+        height: 40px;
+        border: 1px solid $color-purple;
+        background: $color-white;
+        border-radius: 5px;
+        transition: 0.3s ease-in-out;
+
+        &:hover{
+            background: $color-purple;
+            color: $color-white;
+        }
+    }
+
+    &__block-btn{
+        margin: 30px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        @media (max-width:599.9999px) {
+            flex-direction: column;
+        }
+    }
+}
