@@ -1,0 +1,78 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    &__block{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__conteiner{
+        display: inherit;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    &__title{
+        font-family: $font-oswald;
+        font-size: $font-xl;
+        color: $color-turquoise;
+    }
+
+    &__btn{
+        font-family: $font-oswald;
+        font-size: $font-xl;
+        width: 200px;
+        height: 40px;
+        border: 1px solid $color-white;
+        background: $color-white;
+        border-radius: 5px;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover{
+            background: $color-turquoise;
+            color: $color-white;
+        }
+    }
+
+    &__input{
+        border: 2px solid $color-black;
+        border-radius: 5px;
+        padding: 10px;
+        transition: 0.3s ease-in-out;
+        font-family: $font-oswald;
+        font-size: $font-md;
+        width: 250px;
+
+
+        &:hover{
+            border:2px solid $color-turquoise;
+        }
+
+        &:active{
+            border:2px solid $color-turquoise;
+        }
+    }
+
+    &__lnk{
+        margin-top: 5px;
+        font-family: $font-oswald;
+        font-size: $font-md;
+    }
+
+    &__link{
+        color: $color-turquoise;
+    }
+}

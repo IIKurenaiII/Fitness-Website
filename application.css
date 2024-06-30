@@ -1476,4 +1476,140 @@ a {
 .kalendar .fc-daygrid-day:hover {
   background-color: #39ccbb;
   cursor: pointer;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.register__block {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.register__conteiner {
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.register__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.25rem;
+  color: #39ccbb;
+}
+.register__btn {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.25rem;
+  width: 200px;
+  height: 40px;
+  border: 1px solid #fff;
+  background: #fff;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.register__btn:hover {
+  background: #39ccbb;
+  color: #fff;
+}
+.register__input {
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  width: 250px;
+}
+.register__input:hover {
+  border: 2px solid #39ccbb;
+}
+.register__input:active {
+  border: 2px solid #39ccbb;
+}
+.register__lnk {
+  margin-top: 5px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+}
+.register__link {
+  color: #39ccbb;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.authorization {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.authorization__block {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.authorization__conteiner {
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.authorization__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.25rem;
+  color: #39ccbb;
+}
+.authorization__btn {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.25rem;
+  width: 200px;
+  height: 40px;
+  border: 1px solid #fff;
+  background: #fff;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.authorization__btn:hover {
+  background: #39ccbb;
+  color: #fff;
+}
+.authorization__input {
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  width: 250px;
+}
+.authorization__input:hover {
+  border: 2px solid #39ccbb;
+}
+.authorization__input:active {
+  border: 2px solid #39ccbb;
+}
+.authorization__lnk {
+  margin-top: 5px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+}
+.authorization__link {
+  color: #39ccbb;
 }/*# sourceMappingURL=application.css.map */

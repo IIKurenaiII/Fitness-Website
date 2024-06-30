@@ -1,3 +1,4 @@
+
 var navbarbutton = document.getElementById("btn");
 navbarbutton.addEventListener("click",function(){
     window.location.href = "store.html";
@@ -11,7 +12,6 @@ orderbutton3.addEventListener("click",function(){
 storebutton.addEventListener("click",function(){
     window.location.href = "store.html";
 });
-
 
 //messengers
 var buttoninstagram = document.getElementById("ig");
@@ -186,3 +186,4 @@ document.addEventListener('click', function (event) {
         closeModalReg();
     }
 });
+

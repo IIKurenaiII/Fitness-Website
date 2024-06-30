@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="application.css">
+    <title>Fitness Club</title>
+    <script defer src="./src/js/buttons.js"></script>
+    <script src="./src/js/navbar.js"></script>
+    <script src="./src/js/scroll.js"></script>
+    <script src="./src/js/user.js"></script>
+    <script src="./src/js/sendemail.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="conteiner">
+            <div class="navbar__body">
+                <div class="navbar__logo">
+                    <div><a href="" class="navbar__logo_link">FitnessClub</a></div>
+                </div>
+                <div class="navbar__motto">Stronger every day!</div>
+                <div class="navbar__burger">
+                    <span class="navbar__span"></span>
+                </div>
+                <div class="navbar__conteiner_menu">
+                    <div class="navbar__list">
+                        <div ><a class="navbar__link open-modal-link" href="#" onclick="openModal()">Контакти</a></div>
+                        <div ><a href="./about.html" class="navbar__link" >Про нас</a></div>
+                        <button class="navbar__button" type="button" id="btn">Абонементи</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="modal" id="myModal">
+        <div class="modal__content">
+            <div class="modal__image-conteiner">
+                <img class="modal__logo" src="./src/image/Logo-1.svg" alt="">
+            </div>
+            <div class="modal__contact-conteiner">
+                <div class="modal__title">Наші контакти</div>
+                <div class="modal__phone">Телефон: +38(096) 888 11 55</div>
+                <div class="modal__email">Електронна адреса: FitnessClub@gmail.com</div>
+            </div>
+            <div class="modal__social-conteiner">
+                <div class="modal__ig"><img src="./src/image/Instagram_logo_2016.svg" class="modal__social" alt="" id="ig"></div>
+                <div class="modal__fb"><img src="./src/image/Facebook_F_icon.svg" class="modal__social" alt="" id="fb"></div>
+                <div class="modal__tl"><img src="./src/image/Telegram_logo.svg" class="modal__social" alt="" id="tl"></div>
+            </div>
+            <div class="modal__buttons-conteiner">
+                <div>
+                    <button class="modal__button modal__button-send-email" onclick="openEmailModal()">Надіслати листа</button>
+                </div>
+                <div>
+                    <button class="modal__button" onclick="closeModal()">Закрити</button>
+                </div>
+            </div>
+            <div class="modal__email-form" style="display: none;">
+                <div class="mb-3 modal__block">
+                    <label for="emailSubject" class="modal__form-label">Тема листа</label>
+                    <input type="text" class="modal__form-control" id="emailSubject" required>
+                </div>
+                <div class="mb-3 modal__block">
+                    <label for="emailBody" class="modal__form-label">Текст повідомлення</label>
+                    <textarea class="modal__form-control" id="emailBody" rows="5" required></textarea>
+                </div>
+                <button type="button" class="modal__btn btn-primary" onclick="sendEmail()">Надіслати</button>
+            </div>
+        </div>
+    </div>
+    <section class="slaider">
+        <div class="custom_conteiner">
+            <div class="custom-container">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide carousel__1">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="./src/image/slide-image1.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Створи свою мрію з нами</h5>
+                                <p>Професійний тренувальний зал.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="./src/image/slide2-employer.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Елітна Команда Експертів</h5>
+                                <p>Наша команда фахівців з фітнесу гарантує вам найвищий ступінь майстерності та індивідуальний підхід.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./src/image/slide3-dumbbell.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Великий асортимент послуг</h5>
+                                <p>Тренувальне спрорядження, ефективне харчування і багато іншого.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="registration">
+        <div class="conteiner">
+            <div class="registration__conteiner">
+                <div class="registration__logo-conteiner">
+                    <img src="./src/image/Logo-1.svg" alt="" class="registration__logo">
+                </div>
+            </div>
+            <hr class="registration__line">
+            <div class="registration__block">
+                <div class="registration__svg">
+                    <img src="./src/image/account_avatar_face_man_people_profile_user_icon_123197.svg" alt="">
+                </div>
+                <h2 class="registration__title">Вітаємо, <span id="userLogin"></span>!</h2>
+            </div>
+            <hr class="line">
+        </div>
+    </section>
+    <div class="modal" id="myModalReg">
+        <div class="modal__content">
+            <div class="modal__image-conteiner">
+                <img class="modal__logo" src="./src/image/Logo-1.svg" alt="">
+            </div>
+            <div class="modal__contact-conteiner">
+                <div><input type="text" class="registration__input" placeholder="e-mail" name="mail"></div>
+                <div><input type="text" class="registration__input registration__input2" placeholder="password" name="rassword"></div>
+            </div>
+            <div class="modal__social-conteiner">
+                <div class="modal__ig"><img src="./src/image/Instagram_logo_2016.svg" class="modal__social" alt="" id="ig"></div>
+                <div class="modal__fb"><img src="./src/image/Facebook_F_icon.svg" class="modal__social" alt="" id="fb"></div>
+                <div class="modal__tl"><img src="./src/image/Telegram_logo.svg" class="modal__social" alt="" id="tl"></div>
+            </div>
+            <div class="modal__buttons-conteiner">
+                <div><button class="modal__button"  onclick="closeModalReg()">Закрити</button></div>
+                <div><button class="modal__button" onclick="closeModalReg()">Окей</button></div>
+            </div>
+        </div>
+    </div>
+    <section class="trainer">
+        <div class="conteiner">
+            <div class="trainer__container_title">
+                <div class="trainer__title">Сучасні тренажери та обладнання для фітнесу</div>
+                <div class="trainer__sup-title">Наші фахівці допоможуть Вам досягти бажаної форми, здоров'я та впевненості в собі.</div>
+            </div>
+            <div class="trainer__grid_conteiner">
+                <div class="trainer__block">
+                    <div class="trainer__block-title">Бігова доріжка</div>
+                    <div class="trainer__block-image"><img src="./src/image/trainer-image/photo-1.png" alt="" class="trainer__image"></div>
+                    <div class="trainer__conteiner-button">
+                        <div class="trainer__button animation">
+                            <span class="label">Детальніше</span>
+                            <span class="icon">
+                                <span></span>
+                            </span>
+                            <span class="icon2">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trainer__block">
+                    <div class="trainer__block-title">Силові рами</div>
+                    <div class="trainer__block-image"><img src="./src/image/trainer-image/photo-2.png" alt="" class="trainer__image"></div>
+                    <div class="trainer__conteiner-button">
+                        <div class="trainer__button animation">
+                            <span class="label">Детальніше</span>
+                            <span class="icon">
+                                <span></span>
+                            </span>
+                            <span class="icon2">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trainer__block">
+                    <div class="trainer__block-title">Лава для жиму</div>
+                    <div class="trainer__block-image"><img src="./src/image/trainer-image/photo-3.png" alt="" class="trainer__image"></div>
+                    <div class="trainer__conteiner-button">
+                        <div class="trainer__button animation">
+                            <span class="label">Детальніше</span>
+                            <span class="icon">
+                                <span></span>
+                            </span>
+                            <span class="icon2">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trainer__block">
+                    <div class="trainer__block-title">Лава для жиму ногами</div>
+                    <div class="trainer__block-image"><img src="./src/image/trainer-image/photo-4.png" alt="" class="trainer__image"></div>
+                    <div class="trainer__conteiner-button">
+                        <div class="trainer__button animation">
+                            <span class="label">Детальніше</span>
+                            <span class="icon">
+                                <span></span>
+                            </span>
+                            <span class="icon2">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trainer__block">
+                    <div class="trainer__block-title">Велотренажер</div>
+                    <div class="trainer__block-image"><img src="./src/image/trainer-image/photo-5.png" alt="" class="trainer__image"></div>
+                    <div class="trainer__conteiner-button">
+                        <div class="trainer__button animation">
+                            <span class="label">Детальніше</span>
+                            <span class="icon">
+                                <span></span>
+                            </span>
+                            <span class="icon2">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trainer__block">
+                    <div class="trainer__block-title">Орбітрек</div>
+                    <div class="trainer__block-image"><img src="./src/image/trainer-image/photo-6.png" alt="" class="trainer__image"></div>
+                    <div class="trainer__conteiner-button">
+                        <div class="trainer__button animation">
+                            <span class="label">Детальніше</span>
+                            <span class="icon">
+                                <span></span>
+                            </span>
+                            <span class="icon2">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trainer__block">
+                    <div class="trainer__block-title">Машина Смита</div>
+                    <div class="trainer__block-image"><img src="./src/image/trainer-image/photo-7.png" alt="" class="trainer__image"></div>
+                    <div class="trainer__conteiner-button">
+                        <div class="trainer__button animation">
+                            <span class="label">Детальніше</span>
+                            <span class="icon">
+                                <span></span>
+                            </span>
+                            <span class="icon2">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trainer__block">
+                    <div class="trainer__block-title">Інше</div>
+                    <div class="trainer__block-image"><img src="./src/image/trainer-image/photo-8.png" alt="" class="trainer__image"></div>
+                    <div class="trainer__conteiner-button">
+                        <div class="trainer__button animation">
+                            <span class="label">Детальніше</span>
+                            <span class="icon">
+                                <span></span>
+                            </span>
+                            <span class="icon2">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="line">
+        </div>
+    </section>
+    <section class="order">
+        <div class="conteiner">
+            <div class="order__conteiner">
+                <div class="order__title">Пропозиції</div>
+                <div class="order__block-conteiner">
+                    <div class="order__block order__block1">
+                        <img src="./src/image/tainer-1.png" alt=""  class="order__img">
+                        <button class="order__block-button" type="button" id="orderbtn">З тренером</button>
+                    </div>
+                    <div class="order__block order__block2">
+                        <img src="./src/image/individual.png" alt="" class="order__img">
+                        <button class="order__block-button" type="button" id="orderbtn2">Самостійно</button>
+                    </div>
+                    <div class="order__block order__block3">
+                        <img src="./src/image/kalendar.png" alt="" class="order__img">
+                        <button class="order__block-button" type="button" id="orderbtn3">Розклад</button>
+                    </div>
+                    <div class="order__block order__block4">
+                        <img src="./src/image/protein.png" alt="" class="order__img">
+                        <button class="order__block-button" type="button" id="storebtn">Магазин</button>
+                    </div>
+                </div>
+                <button class="order__button" type="button">Дивитись більше</button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__conteiner">
+            <div class="conteiner">
+                <div class="footer__block">
+                    <div class="footer__block-logo">
+                        <img src="./src/image/Logo-1.svg" alt="" class="footer__logo">
+                        <div class="footer__title">Наші контакти</div>
+                    </div>
+                    <div class="footer__content">
+                        <div class="footer__about">
+                            <div class="footer__about-title">FitnessClub</div>
+                            <div class="footer__about-content">Наш фітнес центр є одним із найкращих з великим досвідом. Коротку інформацію про нас можна подивитись <a href="./about.html" class="footer__link">тут</a>.</div>
+                        </div>
+                        <div class="footer__location">
+                            <div class="footer__location-title">Наше місцезнаходження</div>
+                            <div class="footer__location-content">Україна, Київ або Ужгород </div>
+                        </div>
+                        <div class="footer__contact">
+                            <div class="footer__contact-phone">Швидко звязатися з нами за номером: <a href="" class="footer__link">+38(096) 777 11 55</a></div>
+                            <div class="footer__contact-email">Наша електронна пошта: <a href="" class="footer__link">FitnessClub@gmail.com</a></div>
+                            <div class="footer__messengers">
+                                <div class="footer__messenger-instagram"><img src="./src/image/Instagram_logo_2016.svg" alt="" class="footer__mes" id="ig"></div>
+                                <div class="footer__messenger-facebook"><img src="./src/image/Facebook_F_icon.svg" alt="" class="footer__mes" id="fb"></div>
+                                <div class="footer__messenger-yotube"><img src="./src/image/youtube-svgrepo-com.svg" alt="" class="footer__mes" id="yt"></div>
+                                <div class="footer__messenger-telegram"><img src="./src/image/Telegram_logo.svg" alt="" class="footer__mes" id="tl"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
