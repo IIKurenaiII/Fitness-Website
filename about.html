@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar">
         <div class="conteiner">
-            <div class="navbar__body">
+            <div class="navbar__body">5+
                 <div class="navbar__logo">
                     <div><a href="./home.html" class="navbar__logo_link">FitnessClub</a></div>
                 </div>
@@ -46,8 +46,23 @@
                 <div class="modal__tl"><img src="./src/image/Telegram_logo.svg" class="modal__social" alt="" id="tl"></div>
             </div>
             <div class="modal__buttons-conteiner">
-                <div><button class="modal__button">Зателефонувати</button></div>
-                <div><button class="modal__button" onclick="closeModal()">Закрити</button></div>
+                <div>
+                    <button class="modal__button modal__button-send-email" onclick="openEmailModal()">Надіслати листа</button>
+                </div>
+                <div>
+                    <button class="modal__button" onclick="closeModal()">Закрити</button>
+                </div>
+            </div>
+            <div class="modal__email-form" style="display: none;">
+                <div class="mb-3 modal__block">
+                    <label for="emailSubject" class="modal__form-label">Тема листа</label>
+                    <input type="text" class="modal__form-control" id="emailSubject" required>
+                </div>
+                <div class="mb-3 modal__block">
+                    <label for="emailBody" class="modal__form-label">Текст повідомлення</label>
+                    <textarea class="modal__form-control" id="emailBody" rows="5" required></textarea>
+                </div>
+                <button type="button" class="modal__btn btn-primary" onclick="sendEmail()">Надіслати</button>
             </div>
         </div>
     </div>

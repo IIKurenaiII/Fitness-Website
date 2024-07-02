@@ -1,0 +1,41 @@
+.store{
+
+
+    &__title{
+        font-weight: 700;
+        font-size: $font-xxxxl;
+        font-family: $font-oswald;
+        color: $color-turquoise;
+        margin-bottom: 20px;
+    }
+
+    &__card-title{
+        font-size: $font-xl;
+        font-family: $font-oswald;
+        color: $color-turquoise;
+    }
+
+    &__card-text{
+        font-size: $font-md;
+        font-family: $font-oswald;
+        color: $color-black;
+    }
+
+    &__btn{
+        font-family: $font-oswald;
+        font-size: $font-xl;
+        width: 200px;
+        height: 40px;
+        border: 1px solid $color-white;
+        background: $color-white;
+        border-radius: 5px;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover{
+            background: $color-turquoise;
+            color: $color-white;
+        }
+    }
+}
+
